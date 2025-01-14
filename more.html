@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* About Us Section */
+        .about-us {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+            max-width: 800px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+        }
+
+        .about-us h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .about-us p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        .about-us ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+            animation: slideIn 1.4s ease-in-out;
+        }
+
+        .about-us ul li {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .about-us ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #ff6f61;
+            font-size: 1.5rem;
+        }
+
+        /* Back to Main Page Link */
+        .back-to-main {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .back-to-main:hover {
+            background-color: #ff3b2f;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- About Us Section -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>We are a passionate team dedicated to delivering innovative solutions and exceptional experiences.</p>
+        
+        <!-- Key Highlights -->
+        <ul>
+            <li><strong>Our Mission:</strong> To empower individuals and businesses through cutting-edge technology.</li>
+            <li><strong>Our Vision:</strong> To create a world where innovation drives progress and success.</li>
+            <li><strong>Our Values:</strong> Integrity, creativity, collaboration, and customer-centricity.</li>
+            <li><strong>Our Team:</strong> A diverse group of experts committed to excellence.</li>
+            <li><strong>Our Achievements:</strong> Recognized for delivering outstanding results and making a positive impact in our community.</li>
+        </ul>
+
+        <a href="home 1.html" class="back-to-main">Back to Main Page</a>
+    </div>
+</body>
+</html>

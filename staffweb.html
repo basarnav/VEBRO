@@ -1,0 +1,123 @@
+<!-- Updated Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #227b96;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .login-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-form {
+            margin-top: 20px;
+        }
+        .login-form input[type="email"], .login-form input[type="password"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .login-form button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        .animate {
+            animation: animate 2s;
+        }
+        @keyframes animate {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>VEBRO</h1>
+    </div>
+
+    <!-- Staff Login Page -->
+    <div class="login-container animate">
+        <h2>Staff Login</h2>
+        <form class="login-form" id="staff-login-form">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Define the correct email and password
+        const correctEmail = "user1@VEBRO.com";
+        const correctPassword = "ruchi89";
+
+        // Get the form and input elements
+        const form = document.getElementById("staff-login-form");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+
+        // Add an event listener to the form submission
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Get the input values
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Check if the input values match the correct email and password
+            if (email === correctEmail && password === correctPassword) {
+                // Redirect to staff2.html
+                window.location.href = "staff2.html";
+            } else {
+                alert("Invalid email or password");
+            }
+        });
+    </script>
+</body>
+</html>
