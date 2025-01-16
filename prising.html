@@ -12,6 +12,15 @@
             background-color: #598abd; /* Good blue color */
         }
 
+        .navbar {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Colorful gradient */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
@@ -33,13 +42,14 @@
         }
 
         .nav-links li a:hover {
-            background: rgba(255, 255, 255, 0.1); /* Subtle hover background */
-            color: #007BFF; /* Blue hover effect */
+            background: rgba(255, 255, 255, 0.2); /* Subtle hover background */
+            color: #ffcc00; /* Bright hover effect */
+            transform: scale(1.1); /* Scale effect on hover */
         }
 
         .nav-links button {
-            background: #007BFF;
-            color: white;
+            background: #ffcc00; /* Bright button color */
+            color: #000;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -49,7 +59,7 @@
         }
 
         .nav-links button:hover {
-            background: #005bb5; /* Darker blue on hover */
+            background: #e6b800; /* Darker yellow on hover */
             transform: scale(1.05);
         }
 
@@ -83,7 +93,6 @@
             }
         }
 
-
         .pricing-tab {
             background-color: #598abd; /* Good blue color */
             padding: 2em;
@@ -95,11 +104,16 @@
         }
 
         .plan {
-            background-color: #e0cdcd; /* Black color */
+            background-color: #e0cdcd; /* Light color for plans */
             color: #0f0b0b;
             border: 1px solid #fff;
             padding: 1em;
             width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: scale(1.05); /* Scale effect on hover */
         }
 
         .plan h3 {
@@ -118,23 +132,19 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="navdiv">
-            <div class="logo"><a href="#">VEBRO</a></div>
-            <div class="menu-icon" onclick="toggleMenu()"></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="staffweb.html">Staff</a></li>
-                <li><a href="prising.html">pricing-plans</a></li>
-            </ul>
-        </div>
+        <div class="logo"><a href="#" style="color: #fff; font-size: 24px;">VEBRO</a></div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="staffweb.html">Staff</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+        </ul>
     </nav>
 
-    <!-- Pricing Tab -->
     <div class="pricing-tab">
-        <h2 style="color: #fff;">Pricing Plans</h2>
+        <h2 style="color: #fff ;">Pricing Plans</h2>
         <div class="pricing-plans">
             <div class="plan">
                 <h3>Basic</h3>
@@ -165,5 +175,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
