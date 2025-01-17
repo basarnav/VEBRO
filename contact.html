@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .navdiv {
@@ -46,7 +46,6 @@
             color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
-            animation: slideInUp 2s ease-in-out;
         }
 
         .logo a:hover {
@@ -57,12 +56,10 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            animation: fadeIn 2s ease-in-out;
         }
 
         .nav-links li {
             list-style: none;
-            animation: slideInUp 2s ease-in-out;
         }
 
         .nav-links li a {
@@ -73,27 +70,10 @@
             padding: 8px 12px;
             border-radius: 5px;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
         }
 
         .nav-links li a:hover {
             color: #007BFF;
-        }
-
-        .nav-links button {
-            background: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links button:hover {
-            background: #005bb5;
-            transform: scale(1.05);
         }
 
         /* Contact Section */
@@ -105,8 +85,7 @@
             width: 100%;
             max-width: 800px;
             text-align: center;
-            margin: 0 auto;
-            margin-top: 100px;
+            margin: 100px auto;
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -114,7 +93,12 @@
             font-size: 24px;
             margin-bottom: 20px;
             color: #333;
-            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .contact-form input,
@@ -124,7 +108,7 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size:  16px;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
 
@@ -161,7 +145,7 @@
         /* Contact Details */
         .contact-details {
             margin-top: 30px;
-            text-align: left;
+            text-align : left;
             animation: fadeInDetails 1.5s ease-in-out;
         }
 
@@ -213,17 +197,6 @@
             }
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         @keyframes fadeInDetails {
             from {
                 opacity: 0;
@@ -247,7 +220,7 @@
         }
     </style>
 </head>
-<body >
+<body>
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo"><a href="home.html">VEBRO</a></div>
@@ -255,30 +228,25 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="staffweb.html">Staff</a></li>
-                <li><a href="prising.html">pricing-plans</a></li>
+                <li><a href="pricing.html">Pricing Plans</a></li>
             </ul>
         </div>
     </nav>
     <div class="contact-container">
         <h1>Contact Us</h1>
-
-        <!-- Contact Form -->
-        <form action="https://formspree.io/f/xkggyddv"
-  method="POST"
-  enctype="multipart/form-data"">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Subject" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" action="https://formspree.io/f/xkggyddv" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
-
         </form>
-
-        <!-- Contact Details -->
         <div class="contact-details">
             <h2>Get in Touch</h2>
-            <p><strong>Email:</strong> <a href=""> arnav12oct@gmail.<command></command></a></p>
-
+            <p><strong>Email:</strong> <a href="mailto:arnav12oct@gmail.com">arnav12oct@gmail.com</a></p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153163!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b0b5d%3A0x5045675218ceed0!2sVEBRO!5e0!3m2!1sen!2sau!4v1616161616161!5m2!1sen!2sau" allowfullscreen></iframe>
         </div>
     </div>
 </body>
