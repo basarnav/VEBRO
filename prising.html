@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="shortcut icon" href="vebro.jpeg" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #598abd; /* Good blue color */
+            background-color: #a0c4ff; /* Lighter blue color */
         }
 
         .navbar {
-            background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Colorful gradient */
+            background: #333; /* Darker navbar color */
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s ease; /* Smooth transition */
+        }
+
+        .navbar:hover {
+            background: #444; /* Darker on hover */
         }
 
         .nav-links {
@@ -95,8 +99,15 @@
         }
 
         .pricing-tab {
-            background-color: #598abd; /* Good blue color */
+            background-color: #333; /* Match navbar color */
             padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 20px; /* Add margin for spacing */
+        }
+
+        .pricing-tab h2 {
+            color: #fff; /* White text for heading */
         }
 
         .pricing-plans {
@@ -105,20 +116,22 @@
         }
 
         .plan {
-            background-color: #e0cdcd; /* Light color for plans */
+            background-color: #f2efef; /* Light color for plans */
             color: #0f0b0b;
             border: 1px solid #fff;
             padding: 1em;
             width: 30%;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+            border-radius: 10px; /* Rounded corners */
         }
 
         .plan:hover {
             transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
         }
 
         .plan h3 {
-            color: #fff;
+            color: #333; /* Darker color for plan titles */
         }
 
         .plan ul {
@@ -140,12 +153,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="staffweb.html">Staff</a></li>
-            <li><a href="priing.html">Pricing Plans</a></li>
+            <li><a href="prising.html">Pricing Plans</a></li>
         </ul>
     </nav>
 
     <div class="pricing-tab">
-        <h2 style="color: #fff ;">Pricing Plans</h2>
+        <h2>Pricing Plans</h2>
         <div class="pricing-plans">
             <div class="plan">
                 <h3>Basic</h3>
